@@ -1,13 +1,13 @@
 Source: glib2.0
 Section: libs
 Priority: optional
-Maintainer: BlankON Developers <blankon-dev@googlegroups.com>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
 XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: Andreas Henriksson <andreas@fatal.se>, Emilio Pozuelo Monfort <pochu@debian.org>
 Build-Depends: debhelper (>= 9),
                cdbs (>= 0.4.93),
                dh-autoreconf,
-               gcc-4.8 [sparc],
+               gcc-4.8,
                pkg-config (>= 0.16.0),
                gettext,
                autotools-dev,

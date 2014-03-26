@@ -1,9 +1,14 @@
-glib2.0 (2.39.92-2blankon1) tambora; urgency=low
+glib2.0 (2.40.0-1blankon1) tambora; urgency=low
 
-  * New upstream release unstable
-  * Disable build libgio-fam because architecture not used in BlankOn
+  * New upstream release
 
- -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Sat, 22 Mar 2014 20:30:45 +0700
+ -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Wed, 26 Mar 2014 22:16:49 +0700
+
+glib2.0 (2.40.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 24 Mar 2014 20:58:34 +0100
 
 glib2.0 (2.39.92-2) experimental; urgency=medium
 
