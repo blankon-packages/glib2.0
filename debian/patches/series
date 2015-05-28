@@ -17,5 +17,7 @@ gdbus-connection-wait-up-to-10s-to-actually-send-a-m.patch
 0001-timer-test-use-volatile-for-locals.patch
 skip-broken-timer-test.patch
 regex-if-PCRE-is-8.34-or-later-disable-auto-possessi.patch
-regex-test-do-not-assert-that-system-PCRE-allows-P-1.patch
 regex-test-do-not-assert-that-system-PCRE-still-has-.patch
+gdbus-serialization-use-check_serialization-instead-.patch
+0001-Fix-trashing-on-overlayfs.patch
+0001-glocalfilemonitor-Send-DELETED-event-when-there-is-n.patch

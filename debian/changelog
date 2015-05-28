@@ -1,9 +1,65 @@
-glib2.0 (2.44.0-1blankon1) tambora; urgency=medium
+glib2.0 (2.45.1-2blankon1) tambora; urgency=medium
 
-  * New upstream release
-  * Merge with Debian Experimental
+  * Merge with Debian Experimental 
 
- -- Mahyuddin <yudi.al@gmail.com>  Fri, 10 Apr 2015 18:42:55 +0700
+ -- Mahyuddin <yudi.al@gmail.com>  Thu, 28 May 2015 17:12:50 +0700
+
+glib2.0 (2.45.1-2) experimental; urgency=medium
+
+  [ Simon McVittie ]
+  * d/p/regex-if-PCRE-is-8.34-or-later-disable-auto-possessi.patch:
+    update to my latest version submitted upstream, which fixes undefined
+    behaviour in the unlikely event that G_REGEX_OPTIMIZE is combined
+    with g_regex_match_all().
+  * d/p/regex-test-do-not-assert-that-system-PCRE-still-has-.patch:
+    update to my latest version submitted upstream, which asserts that
+    a newer-than-8.32 system PCRE does not have the bug in question.
+  * d/p/gdbus-serialization-use-check_serialization-instead-.patch:
+    add patch to fix FTBFS in non-minimal environments (libdbus-1-dev
+    installed). Applied upstream for 2.45.2.
+
+  [ Iain Lane ]
+  * d/p/0001-Fix-trashing-on-overlayfs.patch: Take patch from
+    upstream bug to fix trashing on overlayfs.
+  * d/p/0001-glocalfilemonitor-Send-DELETED-event-when-there-is-n.patch: Take
+    patch from upstream bug to send the right event when moving files outside
+    a monitored directory.
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 11 May 2015 16:30:47 +0100
+
+glib2.0 (2.45.1-1) experimental; urgency=medium
+
+  * New upstream release 2.45.1
+    + The GSettings schema compiler, glib-compile-schemas has been changed
+      to reject schema xml that has duplicate <summary> or <description>
+      elements. Such elements typically occur when translations are merged
+      into the schema, with xml:lang attributes. This is not the correct way
+      to translate schemas. Instead keep the translations in the .mo file and
+      set the gettext-domain attribute on the <schemalist> element. To avoid
+      breaking already-installed schemas, this change is only taking effect
+      when you use the --strict option.
+    + The file monitoring infrastructure has been rewritten, and all backends
+      have seen major improvements.
+      + The inotify backend is reporting events with less delay (no event will
+        be delayed more than 10ms) and wakeups due to file monitoring have
+        been significantly reduced. A CHANGES_DONE event will also be sent
+        when new files appear.
+      + The poll implementation is now using the thread default main context.
+      + The fam implmentation is now running in the worker thread.
+      + The fen implementation has been removed, since it was unmaintained.
+    + The hardcoded 10-thread limit of GTask's thread pool has been removed,
+      since it was prone to causing deadlocks. The thread pool is now allowed
+      to grow dynamically and will shrink back over time.
+    + GSimpleAsyncResult has been deprecated in favor of GTask.
+    + The algorithm used by GAppInfo to find default handlers for mime types
+      has been tweaked to prefer apps that handle the specific subtype over
+      default handlers for a generic supertype.
+  * d/p/regex-test-do-not-assert-that-system-PCRE-allows-P-1.patch: Drop,
+    applied upstream.
+  * debian/control{,.in}: Update Vcs-* for experimental.
+  * debian/libglib2.0-0.symbols: Add new symbols for this release.
+
+ -- Iain Lane <laney@debian.org>  Fri, 01 May 2015 13:37:01 +0100
 
 glib2.0 (2.44.0-1) experimental; urgency=medium
 
