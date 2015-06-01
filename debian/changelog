@@ -1,8 +1,36 @@
-glib2.0 (2.45.1-2blankon1) tambora; urgency=medium
+glib2.0 (2.45.2-1blankon1) tambora; urgency=medium
 
-  * Merge with Debian Experimental 
+  * New upstream release
+  * Merge with Debian Experimental
 
- -- Mahyuddin <yudi.al@gmail.com>  Thu, 28 May 2015 17:12:50 +0700
+ -- Mahyuddin <yudi.al@gmail.com>  Mon, 01 Jun 2015 17:25:42 +0700
+
+glib2.0 (2.45.2-1~wily1) wily; urgency=medium
+
+  [ Simon McVittie ]
+  * Correctly attribute previous upload to Iain
+  * d/p/0001-Fix-trashing-on-overlayfs.patch: add upstream bug reference
+  * d/p/0001-glocalfilemonitor-Send-DELETED-event-when-there-is-n.patch:
+    add upstream bug reference
+  * d/p/gdbus-peer-test-let-GDBusServer-start-before-notifyi.patch:
+    add patch fixing a race condition in the gdbus-peer test.
+    Applied upstream for 2.45.2.
+  * d/p/GDBus-tests-change-progress-noise-from-if-not-quiet-.patch:
+    add patch fixing potential test failures caused by corrupt TAP
+    output. Applied upstream for 2.45.2.
+  * d/p/gdatetime-test-don-t-assume-that-time-stands-still.patch:
+    add patch fixing potential test failures at the boundary between
+    one second and the next. Applied upstream for 2.45.2.
+  * d/p/10_kfreebsd_issetugid_prototype.patch,
+    d/p/11_kfreebsd_pthread_condattr_setclock_prototype.patch,
+    d/p/13_sparc_prlimit_prototype.patch:
+    drop workarounds for #635205, #703545, #703559 which were all fixed
+    in jessie
+  * d/p/81-skip-monitor-test-on-non-linux.patch: add DEP-3 information
+  * d/p/90_gio-modules-multiarch-compat.patch: add DEP-3 information
+  * Tag a couple more patches as applied upstream for 2.45.2
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Tue, 26 May 2015 15:29:05 +0200
 
 glib2.0 (2.45.1-2) experimental; urgency=medium
 
@@ -25,7 +53,7 @@ glib2.0 (2.45.1-2) experimental; urgency=medium
     patch from upstream bug to send the right event when moving files outside
     a monitored directory.
 
- -- Simon McVittie <smcv@debian.org>  Mon, 11 May 2015 16:30:47 +0100
+ -- Iain Lane <laney@debian.org>  Mon, 11 May 2015 16:30:47 +0100
 
 glib2.0 (2.45.1-1) experimental; urgency=medium
 
