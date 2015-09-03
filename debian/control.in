@@ -171,15 +171,15 @@ Description: Documentation files for the GLib library
  This package contains the HTML documentation for the GLib library
  in /usr/share/doc/@DOC_PKG@/ .
 
-Package: libgio-fam
-Architecture: hurd-any kfreebsd-any
-Depends: ${shlibs:Depends},
-         ${misc:Depends}
-Recommends: gamin
-Multi-Arch: same
-Description: GLib Input, Output and Streaming Library (fam module)
- GIO is the input, output and streaming API of GLib. This package
- provides a fam file and directory monitoring backend for it.
+#Package: libgio-fam
+#Architecture: hurd-any kfreebsd-any
+#Depends: ${shlibs:Depends},
+#         ${misc:Depends}
+#Recommends: gamin
+#Multi-Arch: same
+#Description: GLib Input, Output and Streaming Library (fam module)
+# GIO is the input, output and streaming API of GLib. This package
+# provides a fam file and directory monitoring backend for it.
 
 Package: @REFDBG_PKG@
 Section: debug

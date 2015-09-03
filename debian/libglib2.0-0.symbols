@@ -322,6 +322,7 @@ libgio-2.0.so.0 libglib2.0-0 #MINVER#
  g_dbus_connection_new_for_address_sync@Base 2.26.0
  g_dbus_connection_new_sync@Base 2.26.0
  g_dbus_connection_register_object@Base 2.26.0
+ g_dbus_connection_register_object_with_closures@Base 2.45.6
  g_dbus_connection_register_subtree@Base 2.26.0
  g_dbus_connection_remove_filter@Base 2.26.0
  g_dbus_connection_send_message@Base 2.26.0
@@ -1134,6 +1135,8 @@ libgio-2.0.so.0 libglib2.0-0 #MINVER#
  g_mount_unmount_with_operation@Base 2.22.0
  g_mount_unmount_with_operation_finish@Base 2.22.0
  g_mount_unshadow@Base 2.20.0
+ g_native_socket_address_get_type@Base 2.45.3
+ g_native_socket_address_new@Base 2.45.3
  g_native_volume_monitor_get_type@Base 2.16.0
  g_network_address_get_hostname@Base 2.22.0
  g_network_address_get_port@Base 2.22.0
@@ -1154,6 +1157,7 @@ libgio-2.0.so.0 libglib2.0-0 #MINVER#
  g_network_monitor_get_connectivity@Base 2.43.2
  g_network_monitor_get_default@Base 2.31.8
  g_network_monitor_get_network_available@Base 2.31.8
+ g_network_monitor_get_network_metered@Base 2.45.6
  g_network_monitor_get_type@Base 2.31.8
  g_network_service_get_domain@Base 2.22.0
  g_network_service_get_protocol@Base 2.22.0
@@ -1366,6 +1370,7 @@ libgio-2.0.so.0 libglib2.0-0 #MINVER#
  g_settings_schema_key_ref@Base 2.39.4
  g_settings_schema_key_unref@Base 2.39.4
  g_settings_schema_list_children@Base 2.43.4
+ g_settings_schema_list_keys@Base 2.45.3
  g_settings_schema_ref@Base 2.31.8
  g_settings_schema_source_get_default@Base 2.31.8
  g_settings_schema_source_get_type@Base 2.31.8
@@ -1961,11 +1966,15 @@ libglib-2.0.so.0 libglib2.0-0 #MINVER#
  g_async_queue_pop@Base 2.12.0
  g_async_queue_pop_unlocked@Base 2.12.0
  g_async_queue_push@Base 2.12.0
+ g_async_queue_push_front@Base 2.45.4
+ g_async_queue_push_front_unlocked@Base 2.45.4
  g_async_queue_push_sorted@Base 2.12.0
  g_async_queue_push_sorted_unlocked@Base 2.12.0
  g_async_queue_push_unlocked@Base 2.12.0
  g_async_queue_ref@Base 2.12.0
  g_async_queue_ref_unlocked@Base 2.12.0
+ g_async_queue_remove@Base 2.45.4
+ g_async_queue_remove_unlocked@Base 2.45.4
  g_async_queue_sort@Base 2.12.0
  g_async_queue_sort_unlocked@Base 2.12.0
  g_async_queue_timed_pop@Base 2.12.0
@@ -2522,6 +2531,7 @@ libglib-2.0.so.0 libglib2.0-0 #MINVER#
  g_log_set_default_handler@Base 2.12.0
  g_log_set_fatal_mask@Base 2.12.0
  g_log_set_handler@Base 2.12.0
+ g_log_set_handler_full@Base 2.45.3
  g_logv@Base 2.12.0
  g_lstat@Base 2.12.0
  g_main_context_acquire@Base 2.12.0
@@ -3187,6 +3197,7 @@ libglib-2.0.so.0 libglib2.0-0 #MINVER#
  g_thread_pool_get_max_unused_threads@Base 2.12.0
  g_thread_pool_get_num_threads@Base 2.12.0
  g_thread_pool_get_num_unused_threads@Base 2.12.0
+ g_thread_pool_move_to_front@Base 2.45.4
  g_thread_pool_new@Base 2.12.0
  g_thread_pool_push@Base 2.12.0
  g_thread_pool_set_max_idle_time@Base 2.12.0

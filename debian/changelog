@@ -1,26 +1,70 @@
-glib2.0 (2.45.2-1blankon1) tambora; urgency=medium
+glib2.0 (2.45.6-1blankon1) tambora; urgency=medium
 
-  * New upstream release
-  * Merge with Debian Experimental
+  * Merge with Debian Experimental 
 
- -- Mahyuddin <yudi.al@gmail.com>  Mon, 01 Jun 2015 17:25:42 +0700
+ -- Mahyuddin <yudi.al@gmail.com>  Thu, 03 Sep 2015 11:08:02 +0700
 
-glib2.0 (2.45.2-1~wily1) wily; urgency=medium
+glib2.0 (2.45.6-1) experimental; urgency=medium
+
+  * New upstream releases 2.45.5 and 2.45.6
+    + GNetworkMonitor now provides information about metered networks
+    + g_mem_set_vtable has been deprecated; it has not been working for quite
+      a while. The recommendation is to use valgrind, or replace malloc
+      itself.
+  * debian/patches/0001-GOptionContext-Don-t-crash-without-main-group.patch:
+    Drop, applied upstream.
+  * debian/libglib2.0-0.symbols: Add new symbols for this release.
+
+ -- Iain Lane <laney@debian.org>  Wed, 26 Aug 2015 17:25:52 +0100
+
+glib2.0 (2.45.4-2) experimental; urgency=medium
+
+  * debian/patches/0001-GOptionContext-Don-t-crash-without-main-group.patch:
+    Cherry-pick. Don't crash in GOptionContext if there's no main group. Fixes
+    crash when running (for example) gdbus.
+
+ -- Iain Lane <laney@debian.org>  Wed, 29 Jul 2015 16:30:21 +0100
+
+glib2.0 (2.45.4-1) experimental; urgency=medium
+
+  * New upstream release 2.45.4
+  * d/p/0001-gio-tests-appmonitor-Delete-file-before-checking-for.patch,
+    d/p/0001-glocalfilemonitor-Send-DELETED-event-when-there-is-n.patch: Drop,
+    applied upstream.
+  * d/p/07_disable_tests_on_slow_archs.patch: Refresh to apply cleanly.
+  * debian/libglib2.0-0.symbols: Add new symbols for this release.
+
+ -- Iain Lane <laney@debian.org>  Tue, 21 Jul 2015 18:07:32 +0100
+
+glib2.0 (2.45.3-1) experimental; urgency=medium
+
+  [ Simon McVittie ]
+  * d/p/regex-if-PCRE-is-8.34-or-later-disable-auto-possessi.patch:
+    mark as applied upstream in 2.45.3
+
+  [ Iain Lane ]
+  * New upstream release 2.45.3.
+    + Improve performance of g_signal_handler_disconnect for signals
+      with many handlers
+    + GDBus has gained a new call flag to allow interactive authorization
+    + GSettings:
+     - New API: g_settings_schema_list_keys
+     - Deprecated: g_settings_list_keys
+  * debian/libglib2.0-0.symbols: Update with new symbols from this release.
+  * debian/patches/regex-if-PCRE-is-8.34-or-later-disable-auto-possessi.patch:
+    Delete, applied upstream.
+  * d/p/0001-gio-tests-appmonitor-Delete-file-before-checking-for.patch:
+    Cherry-pick upstream patch to fix testsuite failure causing FTBFS.
+
+ -- Iain Lane <laney@debian.org>  Wed, 01 Jul 2015 18:15:07 +0100
+
+glib2.0 (2.45.2-1) experimental; urgency=medium
 
   [ Simon McVittie ]
   * Correctly attribute previous upload to Iain
   * d/p/0001-Fix-trashing-on-overlayfs.patch: add upstream bug reference
   * d/p/0001-glocalfilemonitor-Send-DELETED-event-when-there-is-n.patch:
     add upstream bug reference
-  * d/p/gdbus-peer-test-let-GDBusServer-start-before-notifyi.patch:
-    add patch fixing a race condition in the gdbus-peer test.
-    Applied upstream for 2.45.2.
-  * d/p/GDBus-tests-change-progress-noise-from-if-not-quiet-.patch:
-    add patch fixing potential test failures caused by corrupt TAP
-    output. Applied upstream for 2.45.2.
-  * d/p/gdatetime-test-don-t-assume-that-time-stands-still.patch:
-    add patch fixing potential test failures at the boundary between
-    one second and the next. Applied upstream for 2.45.2.
   * d/p/10_kfreebsd_issetugid_prototype.patch,
     d/p/11_kfreebsd_pthread_condattr_setclock_prototype.patch,
     d/p/13_sparc_prlimit_prototype.patch:
@@ -28,9 +72,22 @@ glib2.0 (2.45.2-1~wily1) wily; urgency=medium
     in jessie
   * d/p/81-skip-monitor-test-on-non-linux.patch: add DEP-3 information
   * d/p/90_gio-modules-multiarch-compat.patch: add DEP-3 information
-  * Tag a couple more patches as applied upstream for 2.45.2
 
- -- Rico Tzschichholz <ricotz@ubuntu.com>  Tue, 26 May 2015 15:29:05 +0200
+  [ Iain Lane ]
+  * New upstream release 2.45.2
+    + Improve error reporting in glib-compile-schemas.
+    + Add introspection annotations to GListStore.
+  * GDBus-tests-change-progress-noise-from-if-not-quiet-.patch,
+    gdbus-tests-wait-up-to-60s-for-gdbus-testserver-to-t.patch,
+    gdbus-connection-wait-up-to-10s-to-actually-send-a-m.patch,
+    regex-test-do-not-assert-that-system-PCRE-still-has-.patch,
+    gdbus-serialization-use-check_serialization-instead-.patch,
+    gdbus-peer-test-let-GDBusServer-start-before-notifyi.patch,
+    gdatetime-test-don-t-assume-that-time-stands-still.patch: Delete, applied
+    upstream.
+  * 07_disable_tests_on_slow_archs.patch: Refresh to defuzz
+
+ -- Iain Lane <laney@debian.org>  Tue, 09 Jun 2015 16:19:20 +0100
 
 glib2.0 (2.45.1-2) experimental; urgency=medium
 
