@@ -1014,6 +1014,7 @@ libgio-2.0.so.0 libglib2.0-0 #MINVER#
  g_list_store_new@Base 2.43.4
  g_list_store_remove@Base 2.43.4
  g_list_store_remove_all@Base 2.43.4
+ g_list_store_sort@Base 2.45.7
  g_list_store_splice@Base 2.43.4
  g_loadable_icon_get_type@Base 2.16.0
  g_loadable_icon_load@Base 2.16.0
@@ -3726,6 +3727,7 @@ libgobject-2.0.so.0 libglib2.0-0 #MINVER#
  g_param_spec_get_blurb@Base 2.12.0
  g_param_spec_get_default_value@Base 2.37.0
  g_param_spec_get_name@Base 2.12.0
+ g_param_spec_get_name_quark@Base 2.45.8
  g_param_spec_get_nick@Base 2.12.0
  g_param_spec_get_qdata@Base 2.12.0
  g_param_spec_get_redirect_target@Base 2.12.0

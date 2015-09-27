@@ -1,7 +1,8 @@
 Source: glib@APIVER@
 Section: libs
 Priority: optional
-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@
 Build-Depends: debhelper (>= 9),
                cdbs (>= 0.4.93),
@@ -171,18 +172,18 @@ Description: Documentation files for the GLib library
  This package contains the HTML documentation for the GLib library
  in /usr/share/doc/@DOC_PKG@/ .
 
-#Package: libgio-fam
-#Architecture: hurd-any kfreebsd-any
-#Depends: ${shlibs:Depends},
-#         ${misc:Depends}
-#Recommends: gamin
-#Multi-Arch: same
-#Description: GLib Input, Output and Streaming Library (fam module)
-# GIO is the input, output and streaming API of GLib. This package
-# provides a fam file and directory monitoring backend for it.
+Package: libgio-fam
+Architecture: hurd-any kfreebsd-any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Recommends: gamin
+Multi-Arch: same
+Description: GLib Input, Output and Streaming Library (fam module)
+ GIO is the input, output and streaming API of GLib. This package
+ provides a fam file and directory monitoring backend for it.
 
 Package: @REFDBG_PKG@
-Section: debug
+Section: devel
 Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
